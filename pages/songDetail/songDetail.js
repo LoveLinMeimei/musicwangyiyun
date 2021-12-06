@@ -118,7 +118,6 @@ Page({
         this.backgroundAudioManager.play()
       }
     } else {
-      // 音乐暂停
       this.backgroundAudioManager.pause()
     }
   },
