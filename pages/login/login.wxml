@@ -1,0 +1,32 @@
+<!--pages/login/login.wxml-->
+<view class="login-container">
+  <text class="header">欢迎回来！</text>
+  <view class="form-wrap">
+    <form class="form">
+      <view class="input-item">
+        <text class="input-text">手机号码</text>
+        <input
+          class="phone"
+          type="number"
+          id="phone"
+          placeholder="请输入手机号码"
+          bindinput="handleInput"
+        >
+        </input>
+      </view>
+      <view class="input-item">
+        <text class="input-text">密码</text>
+        <input
+          class="password"
+          id="password"
+          password
+          placeholder="请输入密码"
+          bindinput="handleInput"
+        >
+        </input>
+      </view>
+    </form>
+    <button class="login" bindtap="login">登录</button>
+    <view class="noPass">忘记密码？</view>
+  </view>
+</view>

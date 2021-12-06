@@ -1,0 +1,71 @@
+.recommend-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 300rpx;
+  width: 100%;
+}
+.recommend-header .img {
+  height: 300rpx;
+  width: 100%;
+}
+.recommend-header .date {
+  position: absolute;
+  color: #fff;
+  font-size: 40rpx;
+}
+/* 播放列表 */
+.recomment-playList {
+  position: relative;
+  top: -20rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.playList-header {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.playList-header .more{
+  float: right;
+}
+.playList {
+  height: calc(100vh - 400rpx);
+}
+.palyItem {
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.palyItem .img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+.palyItem .musicInfo {
+  font-size: 28rpx;
+  margin-left: 20rpx;
+}
+.musicInfo {
+  height: 80rpx;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.musicInfo text {
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.songname {
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.palyItem .share {
+  width: 40rpx;
+  height: 40rpx;
+}
