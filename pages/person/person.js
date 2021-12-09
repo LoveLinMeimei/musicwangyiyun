@@ -29,7 +29,7 @@ Page({
     // 跳转道登录Login页面的回调
     toLogin () {
       wx.navigateTo({
-        url: '/pages/login/login'
+        url: '/packageLogin/pages/login/login'
       })
     },
 

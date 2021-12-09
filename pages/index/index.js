@@ -1,9 +1,6 @@
 import request from '../../util/request'
 
-// pages/index/index.js
 Page({
-
-  // 页面的初始数据
   data: {
     bannerList: [], // 轮播图列表
     recommendList: [], // 推荐新歌单
@@ -48,7 +45,7 @@ Page({
   // 跳转到推荐页
   goRecommend () {
     wx.navigateTo({
-      url: '/pages/recommend/recommend'
+      url: '/packageSong/pages/recommend/recommend'
     })
   },
 

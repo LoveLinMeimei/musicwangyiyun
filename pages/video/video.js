@@ -116,7 +116,7 @@ Page({
   // 跳转到搜索页
   gotoSearch () {
     wx.navigateTo({
-      url: '/pages/search/search'
+      url: '/packageSearch/pages/search/search'
     })
   },
 

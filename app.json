@@ -1,12 +1,8 @@
 {
   "pages": [
-    "pages/video/video",
-    "pages/search/search",
     "pages/index/index",
-    "pages/recommend/recommend",
-    "pages/songDetail/songDetail",
-    "pages/person/person",
-    "pages/login/login"
+    "pages/video/video",
+    "pages/person/person"
   ],
   "window": {
     "navigationBarBackgroundColor": "#d43b33",
@@ -38,6 +34,27 @@
       }
     ]
   },
+  "subpackages": [
+    {
+      "root": "packageSong",
+      "pages": [
+        "pages/recommend/recommend",
+        "pages/songDetail/songDetail"
+      ]
+    },
+    {
+      "root": "packageSearch",
+      "pages": [
+        "pages/search/search"
+      ]
+    },
+    {
+      "root": "packageLogin",
+      "pages": [
+        "pages/login/login"
+      ]
+    }
+  ],
   "sitemapLocation": "sitemap.json",
   "requiredBackgroundModes": [
     "audio"

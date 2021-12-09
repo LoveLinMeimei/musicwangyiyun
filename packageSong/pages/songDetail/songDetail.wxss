@@ -1,0 +1,157 @@
+.songDetailContainer {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.musicInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.musicInfo .name {
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+  color: #fff;
+}
+.musicInfo .needleInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.musicInfo .circle {
+  margin-top: 10rpx;
+  z-index: 100;
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.musicInfo .needle {
+  position: relative;
+  z-index: 99;
+  left: 60rpx;
+  top: -30rpx;
+  width: 192rpx;
+  height: 274rpx;
+  transform: rotate(-20deg);
+  transform-origin: 30rpx 0rpx;
+  transition: 1s;
+}
+.musicInfo .active {
+  transform: rotate(0deg);
+}
+.discContainer {
+  position: relative;
+  top: -170rpx;
+  width: 598rpx;
+  height: 598rpx;
+}
+.discAnimation {
+  animation: disc 4s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes disc {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.discContainer .imgBackground {
+  width: 598rpx;
+  height: 598rpx;
+}
+.discContainer .innerImg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+}
+/* 歌词 */
+.lrcView {
+  height: calc(100vh - 264rpx);
+}
+.scrollViewHeader {
+  height: 100rpx;
+  width: 100%;
+}
+.scrollViewFooter {
+  height: 200rpx;
+  width: 100%;
+}
+.musicInfo .lrcScrollView {
+  height: 900rpx;
+  text-align: center;
+}
+.lrcItem {
+  font-size: 30rpx;
+  color: #e8e8e8;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.viewItem .lrcActive {
+  font-size: 38rpx;
+  color: #fff;
+}
+/* 进度条 */
+.progressBar {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 600rpx;
+  height: 46rpx;
+}
+.progressBar .progress {
+  position: relative;
+  width: 400rpx;
+  height: 4rpx;
+  margin: 0rpx 12rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.progressBar .redActive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rpx;
+  background-color: red;
+}
+.progressBar .circle {
+  position: absolute;
+  right: -6rpx;
+  top: -5rpx;
+  width: 12rpx;
+  height: 12rpx;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* 底部播放栏 */
+.footer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: -30rpx;
+  border-top: 1px solid #fff;
+  padding-top: 5rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.footer .iconfont {
+  text-align: center;
+  width: 20%;
+  color: #fff;
+  font-size: 50rpx;
+}
+.footer .big {
+  font-size: 70rpx;
+}
