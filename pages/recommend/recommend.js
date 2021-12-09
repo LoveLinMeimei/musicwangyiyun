@@ -27,9 +27,37 @@ Page({
 
     // 订阅来自songDetail的上一首/下一首按钮
     PubSub.subscribe('controlMusicState', (msg, data) => {
+      // console.log(data);
       // msg就是事件名controlMusicState， data才是数据
+
       let { recommendList, musicIndex} = this.data
-      if (data === 'pre') {
+      if (data[1] === 0) {
+        // 顺序播放
+        if (data[0] === 'pre') {
+          if (musicIndex === 0) {
+            musicIndex = recommendList.length
+          }
+          musicIndex -= 1
+        } else {
+          if (musicIndex === recommendList.length - 1) {
+            musicIndex = -1
+          }
+          musicIndex += 1
+        }
+      } else if (data[1] === 1) {
+        // 随机播放
+        musicIndex = parseInt(Math.random() * recommendList.length)
+      } else {
+        // 单曲循环
+        musicIndex = musicIndex
+      }
+      this.setData({
+        musicIndex
+      })
+      const musicId = recommendList[musicIndex].id
+
+      /* let { recommendList, musicIndex} = this.data
+      if (data[0] === 'pre') {
         // 切换上一首
         if (musicIndex === 0) {
           musicIndex = recommendList.length
@@ -45,7 +73,7 @@ Page({
       this.setData({
         musicIndex
       })
-      const musicId = recommendList[musicIndex].id
+      const musicId = recommendList[musicIndex].id */
       // 发布给songDetail
       PubSub.publish('sendMusicId', musicId)
     })

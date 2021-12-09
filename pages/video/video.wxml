@@ -1,7 +1,7 @@
 <view class="viewContainer">
   <view class="search">
     <image class="search-img" src="/static/images/video/video.jpg"></image>
-    <button class="search-btn">搜索音乐</button>
+    <button class="search-btn" bindtap="gotoSearch">搜索音乐</button>
     <image class="search-img" src="/static/images/logo.png"></image>
   </view>
   <!-- 导航区域，标签列表 -->

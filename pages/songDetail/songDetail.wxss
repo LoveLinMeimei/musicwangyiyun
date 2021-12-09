@@ -8,6 +8,17 @@
   align-items: center;
   justify-content: center;
 }
+.musicInfo .name {
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+  color: #fff;
+}
+.musicInfo .needleInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .musicInfo .circle {
   margin-top: 10rpx;
   z-index: 100;
@@ -63,6 +74,32 @@
   height: 370rpx;
   border-radius: 50%;
 }
+/* 歌词 */
+.lrcView {
+  height: calc(100vh - 264rpx);
+}
+.scrollViewHeader {
+  height: 100rpx;
+  width: 100%;
+}
+.scrollViewFooter {
+  height: 200rpx;
+  width: 100%;
+}
+.musicInfo .lrcScrollView {
+  height: 900rpx;
+  text-align: center;
+}
+.lrcItem {
+  font-size: 30rpx;
+  color: #e8e8e8;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.viewItem .lrcActive {
+  font-size: 38rpx;
+  color: #fff;
+}
 /* 进度条 */
 .progressBar {
   display: flex;
@@ -83,7 +120,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  /* width: 100rpx; */
   height: 4rpx;
   background-color: red;
 }
@@ -97,7 +133,6 @@
   border-radius: 50%;
 }
 
-
 /* 底部播放栏 */
 .footer {
   display: flex;
@@ -105,7 +140,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  bottom: -60rpx;
+  bottom: -30rpx;
   border-top: 1px solid #fff;
   padding-top: 5rpx;
   height: 100rpx;

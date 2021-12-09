@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2970970 */
-  src: url('//at.alicdn.com/t/font_2970970_zrp7t47190p.woff2?t=1638603694066') format('woff2'),
-       url('//at.alicdn.com/t/font_2970970_zrp7t47190p.woff?t=1638603694066') format('woff'),
-       url('//at.alicdn.com/t/font_2970970_zrp7t47190p.ttf?t=1638603694066') format('truetype');
+  src: url('//at.alicdn.com/t/font_2970970_k8pwkbgwruo.woff2?t=1638948726267') format('woff2'),
+       url('//at.alicdn.com/t/font_2970970_k8pwkbgwruo.woff?t=1638948726267') format('woff'),
+       url('//at.alicdn.com/t/font_2970970_k8pwkbgwruo.ttf?t=1638948726267') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,26 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon:before {
+  content: "\e6a0";
+}
+
+.icon-sousuo:before {
+  content: "\e620";
+}
+
+.icon-danquxunhuan:before {
+  content: "\e615";
+}
+
+.icon-liebiaoxiangyou:before {
+  content: "\e60a";
+}
+
+.icon-xunhuan:before {
+  content: "\e61f";
 }
 
 .icon-zandinghuishou:before {

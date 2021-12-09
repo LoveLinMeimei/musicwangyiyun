@@ -113,6 +113,13 @@ Page({
     this.getVideoList(this.data.navId)
   },
 
+  // 跳转到搜索页
+  gotoSearch () {
+    wx.navigateTo({
+      url: '/pages/search/search'
+    })
+  },
+
   // 触碰到视频的底部
   /* touchScrollTolower () {
     console.log('...')
