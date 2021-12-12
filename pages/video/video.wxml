@@ -38,9 +38,13 @@
     refresher-triggered="{{pullRefreshFlag}}"
     bindrefresherpulling="pullRefresh"
   >
-    <view class="videoGroup-item" wx:for="{{videoGroup}}" wx:key="index">
+    <view
+      class="videoGroup-item"
+      wx:for="{{videoGroup}}"
+      wx:key="index"
+    >
       <video
-        wx:if="{{item.data.vid === videoId}}"
+        wx:if="{{item.data.vid === videoId && videoUrl.url !== ''}}"
         class="common"
         src="{{videoUrl.url}}"
         poster="{{item.data.coverUrl}}"
@@ -52,37 +56,37 @@
         bindended="handlended"
         autoplay
       >
-    </video>
+      </video>
 
-    <!-- 性能优化：使用image图片代替video标签-->
-    <image
-      wx:else
-      class="common"
-      src="{{item.data.coverUrl}}"
-      id="{{item.data.vid}}"
-      bindtap="handlePlay"
-    ></image>
+      <!-- 性能优化：使用image图片代替video标签-->
+      <image
+        wx:else
+        class="common"
+        src="{{item.data.coverUrl}}"
+        id="{{item.data.vid}}"
+        bindtap="handlePlay"
+      ></image>
 
-    <view class="content">{{item.data.title}}</view>
+      <view class="content">{{item.data.title}}</view>
 
-    <view class="footer">
-      <image class="avatar" src="{{item.data.creator.avatarUrl}}"></image>
-      <text class="nickName">{{item.data.creator.nickname}}</text>
-      <view class="comments_praised">
-        <text class="item">
-          <text class="iconfont icon-aixin"></text>
-          <text class="count">{{item.data.praisedCount}}</text>
-        </text>
-        <text class="item">
-          <text class="iconfont icon-pinglun"></text>
-          <text class="count">{{item.data.commentCount}}</text>
-        </text>
-        <button open-type="share" class="item btn">
-          <text class="iconfont icon-genduo"></text>
-        </button>
+      <view class="footer">
+        <image class="avatar" src="{{item.data.creator.avatarUrl}}"></image>
+        <text class="nickName">{{item.data.creator.nickname}}</text>
+        <view class="comments_praised">
+          <text class="item">
+            <text class="iconfont icon-aixin"></text>
+            <text class="count">{{item.data.praisedCount}}</text>
+          </text>
+          <text class="item">
+            <text class="iconfont icon-pinglun"></text>
+            <text class="count">{{item.data.commentCount}}</text>
+          </text>
+          <button open-type="share" class="item btn">
+            <text class="iconfont icon-genduo"></text>
+          </button>
+        </view>
       </view>
-    </view>
 
-  </view>
+    </view>
   </scroll-view>
 </view>

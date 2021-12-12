@@ -4,6 +4,7 @@
   <swiper
     class="banner"
     autoplay
+    circular
     indicator-dots
     indicator-color="white"
     indicator-active-color="#d43b33"

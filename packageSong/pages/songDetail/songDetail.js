@@ -4,10 +4,6 @@ import request from '../../../util/request'
 const appInstance = getApp()
 
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     isPlay: false, // true为播放
     categoryActive:0, //当前播放方式 0:顺序播放 1：随机播放 2：单曲循环
@@ -24,9 +20,6 @@ Page({
     distanceTop: 0 // 距离顶部的距离
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
     this.setData({
       id: options.id
@@ -40,7 +33,9 @@ Page({
         isPlay: true
       })
     }
+
     this.backgroundAudioManager = wx.getBackgroundAudioManager()
+
     this.backgroundAudioManager.onPlay(() => {
       this.changPlayState(true)
       appInstance.globalData.musicId = options.id
@@ -176,6 +171,19 @@ Page({
       this.getSongDetail(musicId)
       // 自动播放当前的音乐
       this.musicControl(true, musicId)
+
+      if (!this.data.isLrc) {
+        this.setData({
+          lrc: [],
+          lrcArr: []
+        })
+        this.getSongLyric(musicId)
+      }
+
+      this.setData({
+        id: musicId
+      })
+
       // 取消订阅
       PubSub.unsubscribe('sendMusicId');
     })

@@ -1,4 +1,3 @@
- // pages/login/login.js
 import request from '../../../util/request'
 Page({
 
@@ -12,6 +11,7 @@ Page({
   onLoad: function (options) {
   },
 
+  
   // 登录
   async login () {
     wx.showLoading({
@@ -20,6 +20,7 @@ Page({
     })
     const phone = this.data.phone
     const password = this.data.password
+    // 手机号验证
     if (!phone) {
       wx.showToast({
         title: '手机号不能为空',
@@ -35,6 +36,7 @@ Page({
       })
       return
     }
+
     if (!password) {
       wx.showToast({
         title: '密码不能为空',

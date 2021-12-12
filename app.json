@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/video/video",
-    "pages/person/person"
+    "pages/person/person",
+    "pages/video/video"
   ],
   "window": {
     "navigationBarBackgroundColor": "#d43b33",

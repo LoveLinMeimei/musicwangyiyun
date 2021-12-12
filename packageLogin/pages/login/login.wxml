@@ -3,7 +3,7 @@
   <text class="header">欢迎回来！</text>
   <view class="form-wrap">
     <form class="form">
-      <view class="input-item">
+      <view class="input-item phone-item">
         <text class="input-text">手机号码</text>
         <input
           class="phone"
@@ -14,6 +14,7 @@
         >
         </input>
       </view>
+
       <view class="input-item">
         <text class="input-text">密码</text>
         <input

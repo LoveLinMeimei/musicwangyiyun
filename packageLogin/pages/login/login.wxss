@@ -17,11 +17,15 @@
   border-radius: 10rpx;
   padding-left: 35rpx;
 }
+.phone-item {
+  position: relative;
+}
 .input-item .input-text {
   height: 50rpx;
   line-height: 62rpx;
   font-size: 30rpx;
 }
+
 .login {
   margin-top: 40rpx;
   border-radius: 50rpx;
